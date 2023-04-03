@@ -1,0 +1,763 @@
+
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+  }
+
+
+body {
+    height: auto;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #f1f1f1;
+    font-family:  'Outfit', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #383838;
+}
+a:visited{
+    text-decoration: none;
+}
+
+nav {
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    color: #383838;
+    background: #f1f1f1;
+    z-index: 10;
+    box-shadow: -2px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.liste-nav {
+    width: 100%;
+    height: 100%;
+    background: #f1f1f1;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    z-index: 20;
+}
+
+.item-nav {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.item-nav a {
+    font-size: 25px;
+    margin: 0 10px;
+}
+
+.item-nav a::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 0%;
+    height: 2px;
+    background: #383838;
+    transition: width 0.2s ease-in-out;
+}
+.item-nav a:hover::after {
+    width: 100%;
+}
+
+
+.btn-toggle {
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    cursor: pointer;
+    display: none;
+    z-index: 25;
+}
+
+.item-nav:nth-child(1) {
+    margin-right: auto;
+}
+
+.item-nav:nth-child(4) {
+    margin-right: auto;
+}
+
+
+@media screen and (max-width: 700px) {
+    .btn-toggle {
+        display: block;
+    }
+    nav {
+        background: #f1f1f1;
+    }
+    .liste-nav {
+        padding-top: 70px;
+        flex-direction: column;
+        height: auto;
+        position: relative;
+        display: none;
+    }
+    .item-nav {
+        height: 70px;
+        justify-content: center;
+    }
+
+    .liste-nav.active-menu {
+        display: block;
+    }
+}
+
+/* Accueil */
+
+.accueil {
+    width: 100%;
+    height: 100vh;
+    min-height: 970px;
+    background-image: url(ressources/guitare-menu.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 1px dotted #777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo-menu {
+    border-radius: 50%;
+    width: 180px;
+}
+
+.accueil h1 {
+    font-size: 100px;
+    text-shadow: 0 0 10px #000;
+    color: #f1f1f1;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.sous-titre {
+    color: #f1f1f1;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 5px 0;
+    text-shadow: 0 0 10px #000;
+}
+
+.btn-accueil {
+    text-align: center;
+    border-radius: 99999px;
+    background: #531987;
+    border: 1px solid #444;
+    color: #f1f1f1;
+    font-size: 22px;
+    width: 200px;
+    height: 70px;
+    line-height: 70px;
+    margin: 30px auto 0;
+    transition: all 0.2s ease-in-out;
+}
+.btn-accueil:hover {
+    background: #480681;
+    color: #fff;
+}
+
+@media screen and (max-width: 940px) {
+
+    .accueil {
+        height: 650px;
+        min-height: auto;
+    }
+
+    .logo-menu {
+        width: 150px;
+        margin: 110px auto 0;
+    }
+
+    .accueil h1 {
+        font-size: 60px;
+    }
+
+    .sous-titre {
+        font-size: 23px;
+    }
+
+    .btn-accueil {
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 18px;
+        margin: 15px auto 0;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .accueil {
+        height: 550px;
+        min-height: auto;
+
+    }
+
+    .logo-menu {
+        width: 150px;
+        margin: 110px auto 0;
+    }
+
+    .accueil h1 {
+        font-size: 35px;
+    }
+
+    .sous-titre {
+        font-size: 20px;
+    }
+
+    .btn-accueil {
+        width: 130px;
+        height: 45px;
+        line-height: 45px;
+        font-size: 16px;
+    }
+
+}
+
+
+/* Assymetrique */
+
+.services {
+    background: #f1f1f1;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-size: 50px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.carte {
+    display: flex;
+    align-items: center;
+    background: #333;
+    color: #f1f1f1;
+    border-radius: 2px;
+    width: 700px;
+    height: 700px;
+    margin-bottom: 250px;
+}
+
+
+.img {
+    width: 500px;
+    height: 700px;
+    object-fit: cover;
+    position: relative;
+}
+
+.txt-box {
+    width: 50%;
+    height: 100%;
+}
+
+.txt-box h3 {
+    white-space: nowrap;
+    font-size: 35px;
+    margin: 30px 15px;
+}
+
+.txt-box p {
+    line-height: 30px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.btn-card {
+    border-radius: 9999px;
+    outline: none;
+    border: none;
+    background: #531987;
+    border: 1px solid #333;
+    color: #f1f1f1;
+    padding: 20px 35px;
+    font-size: 20px;
+    margin: 35px auto;
+    cursor: pointer;
+    display: block;
+}
+
+.txt-box a {
+    color: #fff;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    .services {
+        padding-bottom: 150px;
+    }
+
+    .carte {
+        flex-direction: column-reverse;
+        height: 1200px;
+        width: 600px;
+        margin-bottom: 0;
+    }
+
+    .img {
+        position: static;
+        width: 600px;
+        height: 750px;
+    }
+
+    .txt-box {
+        width: 85%;
+    }
+
+    h2 {
+        font-size: 50px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+
+    .txt-box h3 {
+        text-align: center;
+    }
+
+    .txt-box p {
+        padding: 0;
+        font-size: 20px;
+    }
+
+    .btn-card {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .carte {
+        flex-direction: column-reverse;
+        height: 1200px;
+        width: 400px;
+        margin-bottom: 0;
+    }
+
+    .img {
+        position: static;
+        width: 400px;
+        height: 750px;
+    }
+
+    .txt-box {
+        width: 85%;
+    }
+
+    h2 {
+        font-size: 50px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+
+    .txt-box h3 {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .txt-box p {
+        padding: 0;
+        font-size: 20px;
+    }
+
+    .btn-card {
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .carte {
+        flex-direction: column-reverse;
+        height: 1000px;
+        width: 320px;
+        margin-bottom: 0;
+    }
+
+    .img {
+        position: static;
+        width: 320px;
+        height: 750px;
+    }
+
+    .txt-box {
+        width: 85%;
+    }
+
+    .services h2 {
+        font-size: 30px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+
+    .txt-box h3 {
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .txt-box p {
+        padding: 0;
+        font-size: 16px;
+    }
+
+    .btn-card {
+        font-size: 15px;
+        padding: 10px 17px;
+    }
+
+}
+
+
+/* parallax */
+
+
+
+.parallax {
+    width: 100%;
+    height: 300px;
+    background: url(ressources/parallax.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.parallax span {
+    display: block;
+    font-size: 60px;
+    color: #f1f1f1;
+    text-transform: uppercase;
+}
+
+
+@media screen and (max-width: 1050px) {
+    .parallax {
+        background-position: 46% 50%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .parallax {
+        background-position: 47.8% 50%;
+    }
+}
+
+
+
+@media screen and (max-width: 540px) {
+
+    .parallax {
+        height: 200px;
+    }
+
+    .parallax span {
+        font-size: 45px;
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+
+    .parallax {
+        height: 150px;
+    }
+
+    .parallax span {
+        font-size: 36px;
+    }
+    
+}
+
+
+@media screen and (min-width: 1900px) {
+    .parallax {
+        background: url(ressources/parallax-large.jpg);
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+
+
+/* Tarifs */
+
+.tarifs {
+    padding-bottom: 150px;
+}
+
+.tarifs h3 {
+    text-align: center;
+    font-size: 45px;
+    margin: 120px 0 20px;
+    padding: 0 30px;
+}
+
+.tarifs hr {
+    width: 200px;
+    margin: 20px auto 100px;
+}
+
+.container-tarifs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cartes-tarifs {
+    width: 350px;
+    height: auto;
+    border-radius: 5px;
+    margin: 15px 15px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s ease-in-out;
+    position: relative;
+}
+
+.cartes-tarifs:hover {
+    transform: translatey(-5px);
+}
+
+.cartes-tarifs h4 {
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 35px;
+    clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 100%);
+    background: #d988ff;
+}
+
+.cartes-tarifs span {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.cartes-tarifs:nth-child(2) h4 {
+    background: #c547ff;
+}
+
+.cartes-tarifs:nth-child(3) h4 {
+    background: #b310ff;
+}
+
+.cartes-tarifs p {
+    font-size: 18px;
+    padding: 20px 10px;
+    border-top: 1px solid rgb(194, 197, 194);
+}
+
+.cartes-tarifs p:last-of-type {
+    border-bottom: 1px solid rgb(194, 197, 194);
+}
+
+.cartes-tarifs p:nth-child(odd) {
+    background: rgba(195, 195, 195, 0.219);
+}
+
+.cartes-tarifs a {
+    display: block;
+    border: 1px solid #333;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    border-radius: 9999px;
+    line-height: 50px;
+    color: #333;
+    font-size: 18px;
+    margin: 20px auto;
+    transition: all 0.2s ease-in-out;
+}
+
+.cartes-tarifs a:hover {
+    background: #333;
+    color: #f1f1f1;
+}
+
+@media screen and (max-width: 900px) {
+    
+    .tarifs h3 {
+        font-size: 35px;
+        margin: 80px 0 20px;
+    }
+
+    .tarifs hr {
+        margin: 20px auto 50px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    
+    .tarifs h3 {
+        font-size: 30px;
+        margin: 50px 0 20px;
+        padding: 0 10px;
+    }
+
+    .tarifs hr {
+        width: 200px;
+        margin: 20px auto 20px;
+    }
+}
+
+
+
+
+        /* Contact */
+
+
+.contact {
+    padding-bottom: 100px;
+}
+
+.contact h2 {
+    text-align: center;
+    color: #333;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 50px;
+    padding: 70px 0 0 0;
+}
+
+
+.container-form {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.form-groupe {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.form-groupe label {
+    color: #2e2e2e;
+    font-size: 20px;
+}
+
+.form-groupe input {
+    display: block;
+    width: 100%;
+    padding: 10px 0px;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 3px solid #757575;
+    color: #666;
+    font-size: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-groupe input:focus {
+    border-bottom: 3px solid #C547FF;
+}
+
+
+textarea {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border: 3px solid #aaa;
+    border-radius: 3px;
+    padding: 5px;
+    resize: none;
+    outline: none;
+    font-size: 20px;
+    background: #f1f1f1;
+    transition: all 0.2s ease-in-out;
+}
+
+textarea:focus {
+    border: 3px solid #C547FF;
+}
+
+
+
+
+.form-groupe:nth-child(4) {
+    margin-bottom: 25px;
+}
+
+.form-groupe .button-sub {
+    display: block;
+    width: auto;
+    padding: 15px 60px;
+    border: 3px solid rgb(144, 144, 144);
+    border-radius: 9999px;
+    background-image: linear-gradient(to right, transparent 50%, #B310FF 50%, #C547FF);
+    background-size: 200%;
+    color: #333;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-groupe .button-sub:hover {
+    color: #fff;
+    background-position: 100%;
+    border: 3px solid #fff;
+}
+
+@media screen and (max-width: 1300px) {
+    
+    .contact h2 {
+        padding: 70px 0 0 0;
+    }
+
+    .container-form {
+        padding-left: 0;
+    }
+
+}
+
+
+            /* Footer */
+
+footer {
+    border-top: 1px solid #333;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+
+
+
