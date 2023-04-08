@@ -12,7 +12,3 @@ allLinks.forEach(item => {
         menu.classList.toggle('active-menu') 
     })
 })
-
-
-
-
