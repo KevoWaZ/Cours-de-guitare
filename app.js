@@ -14,20 +14,20 @@ allLinks.forEach(item => {
 })
 
 const change = document.querySelector(".btn");
-let cssEnabled = true; // Ètat initial du CSS
+let cssEnabled = true; // √©tat initial du CSS
 
 change.addEventListener('click', () => {
-  if (cssEnabled) { // si le CSS est actuellement activÈ
-    document.querySelectorAll('style,link[rel="stylesheet"]').forEach(item => item.remove()); // supprime tous les ÈlÈments <style> et <link>
-    change.textContent = "RÈactiver le CSS"; // change le texte du bouton
-    cssEnabled = false; // met ‡ jour l'Ètat du CSS
-  } else { // si le CSS est actuellement dÈsactivÈ
+  if (cssEnabled) { // si le CSS est actuellement activ√©
+    document.querySelectorAll('style,link[rel="stylesheet"]').forEach(item => item.remove()); // supprime tous les √©l√©ments <style> et <link>
+    change.textContent = "R√©activer le CSS"; // change le texte du bouton
+    cssEnabled = false; // met √† jour l'√©tat du CSS
+  } else { // si le CSS est actuellement d√©sactiv√©
     const head = document.querySelector("head");
-    const link = document.createElement("link"); // crÈe un ÈlÈment <link>
-    link.rel = "stylesheet"; // dÈfinit le type d'ÈlÈment <link> comme Ètant un fichier CSS
-    link.href = "style.css"; // dÈfinit le chemin du fichier CSS
-    head.appendChild(link); // ajoute l'ÈlÈment <link> ‡ la balise <head>
-    change.textContent = "DÈsactiver le CSS"; // change le texte du bouton
-    cssEnabled = true; // met ‡ jour l'Ètat du CSS
+    const link = document.createElement("link"); // cr√©e un √©l√©ment <link>
+    link.rel = "stylesheet"; // d√©finit le type d'√©l√©ment <link> comme √©tant un fichier CSS
+    link.href = "style.css"; // d√©finit le chemin du fichier CSS
+    head.appendChild(link); // ajoute l'√©l√©ment <link> √† la balise <head>
+    change.textContent = "D√©sactiver le CSS"; // change le texte du bouton
+    cssEnabled = true; // met √† jour l'√©tat du CSS
   }
 });
