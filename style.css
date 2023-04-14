@@ -1,6 +1,6 @@
-
-
-*, ::before, ::after {
+*,
+::before,
+::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 
 body {
@@ -19,14 +19,15 @@ body {
     margin: 0;
     padding: 0;
     background: #f1f1f1;
-    font-family:  'Outfit', sans-serif;
+    font-family: 'Outfit', sans-serif;
 }
 
 a {
     text-decoration: none;
     color: #383838;
 }
-a:visited{
+
+a:visited {
     text-decoration: none;
 }
 
@@ -70,6 +71,7 @@ nav {
     background: #383838;
     transition: width 0.2s ease-in-out;
 }
+
 .item-nav a:hover::after {
     width: 100%;
 }
@@ -97,9 +99,11 @@ nav {
     .btn-toggle {
         display: block;
     }
+
     nav {
         background: #f1f1f1;
     }
+
     .liste-nav {
         padding-top: 70px;
         flex-direction: column;
@@ -107,6 +111,7 @@ nav {
         position: relative;
         display: none;
     }
+
     .item-nav {
         height: 70px;
         justify-content: center;
@@ -168,6 +173,7 @@ nav {
     margin: 30px auto 0;
     transition: all 0.2s ease-in-out;
 }
+
 .btn-accueil:hover {
     background: #480681;
     color: #fff;
@@ -487,7 +493,7 @@ nav {
     .parallax span {
         font-size: 45px;
     }
-    
+
 }
 
 @media screen and (max-width: 400px) {
@@ -499,7 +505,7 @@ nav {
     .parallax span {
         font-size: 36px;
     }
-    
+
 }
 
 
@@ -611,7 +617,7 @@ nav {
 }
 
 @media screen and (max-width: 900px) {
-    
+
     .tarifs h3 {
         font-size: 35px;
         margin: 80px 0 20px;
@@ -623,7 +629,7 @@ nav {
 }
 
 @media screen and (max-width: 425px) {
-    
+
     .tarifs h3 {
         font-size: 30px;
         margin: 50px 0 20px;
@@ -639,7 +645,7 @@ nav {
 
 
 
-        /* Contact */
+/* Contact */
 
 
 .contact {
@@ -736,7 +742,7 @@ textarea:focus {
 }
 
 @media screen and (max-width: 1300px) {
-    
+
     .contact h2 {
         padding: 70px 0 0 0;
     }
@@ -748,7 +754,7 @@ textarea:focus {
 }
 
 
-            /* Footer */
+/* Footer */
 
 footer {
     border-top: 1px solid #333;
@@ -756,8 +762,3 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
-
-
-
-
-
