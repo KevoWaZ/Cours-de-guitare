@@ -20,6 +20,10 @@
     <meta name="twitter:title" content="Cours de Guitare en ligne - Apprenez la guitare en 3 mois | Kevowaz">
     <meta name="twitter:description" content="Cours de guitare en ligne pour tous niveaux. Apprenez facilement et rapidement la guitare en seulement 3 mois grâce à notre méthode innovante.">
     <meta name="twitter:image" content="https://kevowaz.github.io/Cours-de-guitare/images/guitar-hero.jpg">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
 </head>
 
 
@@ -33,7 +37,7 @@
         <nav>
             <ul class="liste-nav">
                 <li class="item-nav"><a href="#home">Accueil</a></li>
-                <li class="item-nav"><button class="btn">Desactiver<button></li>
+                <li class="item-nav"><button class="btn">Desactiver</li>
                 <li class="item-nav"><a href="#services">Services</a></li>
                 <li class="item-nav"><a href="#tarifs">Tarifs</a></li>
                 <li class="item-nav"><a href="#contact">Contact</a></li>
@@ -49,19 +53,19 @@
         <!-- Accueil -->
 
         <div class="accueil" id="home">
-            <img src="ressources/logo-menu.jpg" alt="logo menu" class="logo-menu">
-            <h1>Apprenez la guitare</h1>
-            <p class="sous-titre">Un monde remplit d'harmonies</p>
-            <a href="#services" class="btn-accueil">En savoir plus</a>
+            <img src="ressources/logo-menu.jpg" alt="logo menu" class="logo-menu" data-aos="fade-in">
+            <h1 data-aos="fade-in">Apprenez la guitare</h1>
+            <p class="sous-titre" data-aos="fade-in">Un monde remplit d'harmonies</p>
+            <a href="#services" class="btn-accueil" data-aos="fade-in">En savoir plus</a>
         </div>
 
 
         <!-- Services -->
 
         <section class="services" id="services">
-            <h2>Nos services</h2>
+            <h2 data-aos="fade-up">Nos services</h2>
 
-            <div class="carte carte-1">
+            <div class="carte carte-1" data-aos="fade-up-right">
                 <img src="ressources/bloc1.jpg" alt="Guitare noir pose a côté d'un ampli" class="img img1">
                 <div class="txt-box">
                     <h3>Titre du truc</h3>
@@ -70,7 +74,7 @@
                 </div>
             </div>
 
-            <div class="carte carte-2">
+            <div class="carte carte-2" data-aos="fade-up-left">
                 <img src="ressources/bloc2.jpg" alt="Homme jouant de la guitare debout" class="img img2">
                 <div class="txt-box">
                     <h3>Titre du truc</h3>
@@ -79,7 +83,7 @@
                 </div>
             </div>
 
-            <div class="carte carte-3">
+            <div class="carte carte-3" data-aos="fade-up-right">
                 <img src="ressources/bloc3.jpg" alt="Guitare blanche posée sur le sol" class="img img3">
                 <div class="txt-box">
                     <h3>Titre du truc</h3>
@@ -101,10 +105,10 @@
         <!-- Tarifs -->
 
         <section class="tarifs" id="tarifs">
-            <h3>Choisissez votre offre</h3>
-            <hr>
+            <h3 data-aos="fade-up">Choisissez votre offre</h3>
+            <hr data-aos="fade-up">
             <div class="container-tarifs">
-                <div class="cartes-tarifs">
+                <div class="cartes-tarifs" data-aos="fade-down-right">
                     <h4>Classique</h4>
                     <span>100 €</span>
                     <p>✔️ Lorem ipsum dolor sit.</p>
@@ -117,7 +121,7 @@
                     <a href="#contact">Je choisis</a>
                 </div>
 
-                <div class="cartes-tarifs">
+                <div class="cartes-tarifs" data-aos="fade-up">
                     <h4>Classique</h4>
                     <span>200 €</span>
                     <p>✔️ Lorem ipsum dolor sit.</p>
@@ -130,7 +134,7 @@
                     <a href="#contact">Je choisis</a>
                 </div>
 
-                <div class="cartes-tarifs">
+                <div class="cartes-tarifs" data-aos="fade-down-left">
                     <h4>Classique</h4>
                     <span>300 €</span>
                     <p>✔️ Lorem ipsum dolor sit.</p>
@@ -152,7 +156,7 @@
 
         <section class="contact" id="contact">
 
-            <h2><strong>Rentrons</strong> en contact</h2>
+            <h2 data-aos="fade-up"><strong>Rentrons</strong> en contact</h2>
             <div class="container-form">
                 <form class="form-bloc">
                     <div class="form-groupe">
@@ -184,6 +188,10 @@
     <footer>
         Tous Droits Réservés &copy;
     </footer>
+    
+    <script>
+        AOS.init();
+    </script>
 
     <script src="app.js"></script>
 </body>

@@ -137,6 +137,7 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .logo-menu {
@@ -249,6 +250,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 .services h2 {
@@ -524,6 +526,7 @@ nav {
 
 .tarifs {
     padding-bottom: 150px;
+    overflow: hidden;
 }
 
 .tarifs h3 {
